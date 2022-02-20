@@ -2,6 +2,8 @@ package cl.example.bitcoinwallet
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import cl.example.bitcoinwallet.ui.AddressGeneratorFragment
 
 /*
 [] Modelo (data class)
@@ -21,5 +23,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        supportFragmentManager.beginTransaction().add(R.id.main_container, AddressGeneratorFragment()).commit()
     }
 }

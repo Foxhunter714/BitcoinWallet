@@ -5,4 +5,6 @@
     <string name="wallet">Wallet</string>
     <string name="historial">Historial</string>
     <string name="address">Address</string>
+    <string name="text_generate">Address generated</string>
+    <string name="generate">Generate</string>
 </resources>
