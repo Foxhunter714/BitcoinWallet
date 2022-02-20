@@ -6,13 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+    <Button
+        android:id="@+id/button"
+        android:layout_width="147dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="60dp"
+        android:text="Generate Address"
+        android:background="@drawable/borde_curvo_color_dark_purple__gradient"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="147dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="33dp"
+        android:text="Transaction history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="147dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="261dp"
+        android:text="Wallet State"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 </androidx.constraintlayout.widget.ConstraintLayout>
