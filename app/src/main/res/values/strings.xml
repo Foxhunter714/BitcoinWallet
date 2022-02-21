@@ -3,7 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="wallet">Wallet</string>
-    <string name="historial">Historial</string>
+    <string name="historial">History</string>
     <string name="address">Address</string>
     <string name="text_generate">Address generated</string>
     <string name="generate">Generate</string>

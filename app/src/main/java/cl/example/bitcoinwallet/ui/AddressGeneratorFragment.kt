@@ -11,7 +11,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
-import cl.example.bitcoinwallet.R
 import cl.example.bitcoinwallet.databinding.FragmentAddressGeneratorBinding
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.WriterException
