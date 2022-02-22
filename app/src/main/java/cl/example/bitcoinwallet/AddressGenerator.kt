@@ -1,4 +1,5 @@
 package cl.example.bitcoinwallet
 
-class AddressGenerator {
-}
+import java.util.*
+
+class AddressGenerator {}

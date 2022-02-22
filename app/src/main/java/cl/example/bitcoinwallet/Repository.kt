@@ -9,8 +9,10 @@ class Repository {
     private val walletDatabase = WalletApplication.walletDatabase!!
 
     val wallets = walletDatabase.walletDao().getWallet()
+    val wallet: MutableLiveData<Wallet> = MutableLiveData()
 
-    val walletDetail: MutableLiveData<Wallet> = MutableLiveData()
+
+
 
     suspend fun getWalletTransaction(){
         Timber.d("getWalletTransaction")
@@ -18,8 +20,22 @@ class Repository {
 
         when(response.isSuccessful){
             true-> response.body()?.let{
-                walletDetail.value = it }
+                wallet.value = it }
             false-> Timber.d("${response.body()}")
             }
         }
+
+    val walletsDetail = walletDatabase.walletDao().getWalletDetail()
+    val walletDetail: MutableLiveData<WalletDetail> = MutableLiveData()
+
+    suspend fun getWalletTransactionDetail(){
+        Timber.d("getWalletDetailTransaction")
+        val response = RetrofitClient.retrofitInstance().getWalletTransactionDetail()
+
+        when(response.isSuccessful){
+            true-> response.body()?.let {
+               walletDetail.value = it
+            } false -> Timber.d("${response.body()}")
+        }
+    }
     }

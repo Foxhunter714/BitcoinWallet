@@ -9,6 +9,9 @@ import timber.log.Timber
     @Entity(tableName = "wallet")
     data class WalletEntity(@PrimaryKey val address: String, val balance: Int, val final_balance: Int)
 
+    @Entity(tableName = "wallet_detail")
+    data class WalletDetailEntity(@PrimaryKey val tx_hash: String, val confirmed: String, val ref_balance: Int)
+
     //Operation Interfaces
     @Dao
     interface WalletDao{
@@ -16,11 +19,17 @@ import timber.log.Timber
         suspend fun insert(wallet: List<WalletEntity>)
 
         @Query("SELECT * FROM wallet")
-        fun getWallet(): LiveData<List<WalletEntity>>
+        fun getWallet(): LiveData<WalletEntity>
+
+        @Insert(onConflict = OnConflictStrategy.REPLACE)
+        suspend fun insertDetail(walletDetail: List<WalletDetailEntity>)
+
+        @Query("SELECT * FROM wallet_detail")
+        fun getWalletDetail(): LiveData<WalletDetailEntity>
     }
 
     //DDBB Wallet
-    @Database(entities = [WalletEntity::class], version = 1)
+    @Database(entities = [WalletEntity::class, WalletDetailEntity::class], version = 1)
     abstract class WalletDatabase: RoomDatabase(){
         abstract fun walletDao(): WalletDao
     }

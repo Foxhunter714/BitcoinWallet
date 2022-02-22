@@ -6,17 +6,17 @@ import android.view.Menu
 import cl.example.bitcoinwallet.ui.AddressGeneratorFragment
 
 /*
-[] Modelo (data class)
+[X] Modelo (data class)
 [X] Consumo API (retrofit)
-[] Repositorio
-[] ViewModel
-[] ViewBinding
-[] Fragmento de listado (listing)
-[] RecyclerView + Adapter + ViewHolder
-[] Fragmento de detalle (detail)
+[X] Repositorio
+[X] ViewModel
+[X] ViewBinding
+[X] Fragmento de listado (listing)
+[X] RecyclerView + Adapter + ViewHolder
+[X] Fragmento de detalle (detail)
 [] Testing unitario para mappers
 [] Intent implícito para compartir
-[] Persistencia de datos locales (ROOM)
+[X] Persistencia de datos locales (ROOM)
 [] Testing para la base de datos*/
 
 class MainActivity : AppCompatActivity() {

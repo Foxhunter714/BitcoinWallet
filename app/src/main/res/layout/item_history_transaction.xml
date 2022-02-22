@@ -55,7 +55,7 @@
                 android:id="@+id/ivBit"
                 android:layout_width="112dp"
                 android:layout_height="96dp"
-                android:layout_marginStart="43dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/ic_baseline_currency_bitcoin_24"
                 app:layout_constraintStart_toStartOf="parent"

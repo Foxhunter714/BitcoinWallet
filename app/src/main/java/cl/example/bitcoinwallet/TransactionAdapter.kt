@@ -14,8 +14,11 @@ class TransactionAdapter: RecyclerView.Adapter<TransactionAdapter.TransactionVH>
 
     inner class TransactionVH (val binding: ItemHistoryTransactionBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(wallet: Wallet){
-            //binding.tvDate.text = wallet.date
             binding.tvBalance.text = wallet.balance.toString()
+            //binding.tvFinalBalance.text = wallet.final_balance.toString()
+            binding.tvFinalBalance.text = wallet.txrefs[transactionList.size].ref_balance.toString()
+            binding.tvAddressTransaction.text = wallet.address
+            binding.tvDate.text = wallet.txrefs[transactionList.size].confirmed
         }
     }
 
@@ -39,5 +42,12 @@ class TransactionAdapter: RecyclerView.Adapter<TransactionAdapter.TransactionVH>
     fun update(pTransactionList: List<Wallet>){
         transactionList = pTransactionList
         notifyDataSetChanged()
+    }
+
+    fun count(){
+        var counter = 0
+        while (counter < transactionList.size){
+            counter++
+        }
     }
 }

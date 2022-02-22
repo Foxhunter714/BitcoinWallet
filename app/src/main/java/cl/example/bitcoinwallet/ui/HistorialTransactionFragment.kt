@@ -21,8 +21,16 @@ class HistorialTransactionFragment : Fragment() {
     ): View? {
         binding = ItemHistoryTransactionBinding.inflate(layoutInflater)
 
-        viewModel.getWalletDetail().observe(viewLifecycleOwner, {
+        /*viewModel.getWalletDetail().observe(viewLifecycleOwner, {
+           binding.tvDate.text = it.confirmed
+        })*/
+
+        viewModel.getWallet().observe(viewLifecycleOwner, {
             binding.tvBalance.text = it.balance.toString()
+            binding.tvAddressTransaction.text = it.address
+            binding.tvFinalBalance.text = it.txrefs[0].ref_balance.toString()
+            //binding.tvFinalBalance.text = it.final_balance.toString()
+            binding.tvDate.text = it.txrefs[0].confirmed
         })
         return binding.root
     }

@@ -6,5 +6,8 @@
     <string name="historial">History</string>
     <string name="address">Address</string>
     <string name="text_generate">Address generated</string>
-    <string name="generate">Generate</string>
+    <string name="generate">New Address</string>
+    <string name="saveAddres">Save Address</string>
+    <string name="generateQr">Generate QR</string>
+    <string name="messageAddress">You have 3 choices, wait for it...</string>
 </resources>

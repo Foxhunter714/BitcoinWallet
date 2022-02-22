@@ -13,12 +13,24 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp">
 
-    <EditText
-        android:id="@+id/etAddress"
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="31dp"
+        android:text="@string/messageAddress" />
+
+    <TextView
+        android:id="@+id/tvAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:layout_marginTop="50dp"
+        android:textSize="15sp"
         android:inputType="textPersonName"
         android:hint="@string/text_generate"/>
 
@@ -26,9 +38,40 @@
         android:id="@+id/btnGenerate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/generateQr"
+        android:textColor="@color/secondaryColor"
+        android:background="@drawable/borde_curvo_color_dark_purple__gradient"
+        android:textSize="10sp"/>
+
+    <Button
+        android:id="@+id/btnGenerateAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="12dp"
+        android:layout_toStartOf="@+id/btnSaveAddress"
+        android:layout_toEndOf="@+id/btnGenerate"
         android:text="@string/generate"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"/>
+        android:textColor="@color/secondaryColor"
+        android:background="@drawable/borde_curvo_color_dark_purple__gradient"
+        android:textSize="10sp"/>
+
+    <Button
+        android:id="@+id/btnSaveAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/saveAddres"
+        android:textColor="@color/secondaryColor"
+        android:background="@drawable/borde_curvo_color_dark_purple__gradient"
+        android:textSize="10sp"/>
+
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
@@ -44,5 +87,6 @@
             android:layout_height="match_parent"
             android:id="@+id/ivQRCode"/>
     </LinearLayout>
+
 </RelativeLayout>
 </FrameLayout>

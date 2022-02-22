@@ -10,11 +10,22 @@ class WalletViewModel: ViewModel() {
     fun selected(): LiveData<Wallet> = selected
     private val selected = MutableLiveData<Wallet>()
 
-    fun getWalletDetail(): LiveData<Wallet> = repository.walletDetail
+    fun selectedTransaction(): LiveData<WalletDetail> = selectedTransaction
+    private val selectedTransaction = MutableLiveData<WalletDetail>()
+
+    fun getWallet(): LiveData<Wallet> = repository.wallet
+
+    fun getWalletDetail(): LiveData<WalletDetail> = repository.walletDetail
 
     init {
         viewModelScope.launch {
             repository.getWalletTransaction()
+        }
+    }
+
+    init {
+        viewModelScope.launch {
+            repository.getWalletTransactionDetail()
         }
     }
 }
