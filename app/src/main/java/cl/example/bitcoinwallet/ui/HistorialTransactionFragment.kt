@@ -6,31 +6,36 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import cl.example.bitcoinwallet.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import cl.example.bitcoinwallet.TransactionAdapter
 import cl.example.bitcoinwallet.WalletViewModel
 import cl.example.bitcoinwallet.databinding.FragmentHistorialTransactionBinding
-import cl.example.bitcoinwallet.databinding.ItemHistoryTransactionBinding
 
 class HistorialTransactionFragment : Fragment() {
-    private lateinit var binding: ItemHistoryTransactionBinding
+    private lateinit var binding: FragmentHistorialTransactionBinding
     private val viewModel: WalletViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = ItemHistoryTransactionBinding.inflate(layoutInflater)
-
+        binding = FragmentHistorialTransactionBinding.inflate(layoutInflater)
+        binding.rvHistoryTransaction.layoutManager = LinearLayoutManager(context)
+        val adapter = TransactionAdapter()
+        binding.rvHistoryTransaction.adapter = adapter
         /*viewModel.getWalletDetail().observe(viewLifecycleOwner, {
            binding.tvDate.text = it.confirmed
         })*/
 
         viewModel.getWallet().observe(viewLifecycleOwner, {
-            binding.tvBalance.text = it.balance.toString()
-            binding.tvAddressTransaction.text = it.address
-            binding.tvFinalBalance.text = it.txrefs[0].ref_balance.toString()
+            adapter.update(it)
+        //binding.tvBalance.text = it.ref_balance.toString()
+            //binding.tvBalance.text = it.balance.toString()
+            //binding.tvAddressTransaction.text = it.address
+            //binding.tvFinalBalance.text = it.txrefs[0].ref_balance.toString()
             //binding.tvFinalBalance.text = it.final_balance.toString()
-            binding.tvDate.text = it.txrefs[0].confirmed
+            //binding.tvDate.text = it.txrefs[0].confirmed
+            //binding.tvDate.text = it.confirmed
         })
         return binding.root
     }

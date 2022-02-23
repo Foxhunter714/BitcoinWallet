@@ -9,5 +9,9 @@
     <string name="generate">New Address</string>
     <string name="saveAddres">Save Address</string>
     <string name="generateQr">Generate QR</string>
-    <string name="messageAddress">You have 3 choices, wait for it...</string>
+    <string name="messageAddress">You need to press the button "new address" and wait for the answer, after that save the new addres...</string>
+    <string name="messageWallet">Welcome to your wallet...white color is balance, black color is final balance and red color is unoconfirmed balance</string>
+    <string name="dialog_message">Accept</string>
+    <string name="dialog_message_no">Decline</string>
+    <string name="title_message">¿Are you sure to save this address?</string>
 </resources>

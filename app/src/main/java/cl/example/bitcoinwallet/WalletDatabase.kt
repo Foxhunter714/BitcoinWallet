@@ -10,7 +10,7 @@ import timber.log.Timber
     data class WalletEntity(@PrimaryKey val address: String, val balance: Int, val final_balance: Int)
 
     @Entity(tableName = "wallet_detail")
-    data class WalletDetailEntity(@PrimaryKey val tx_hash: String, val confirmed: String, val ref_balance: Int)
+    data class WalletDetailEntity(@PrimaryKey val tx_hash: String, val confirmed: String)
 
     //Operation Interfaces
     @Dao

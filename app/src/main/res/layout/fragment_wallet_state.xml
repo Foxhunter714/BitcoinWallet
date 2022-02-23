@@ -3,12 +3,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".remote.WalletStateFragment">
+    tools:context=".MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
 
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="31dp"
+            android:layout_marginTop="0dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="@string/messageWallet" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:ems="10"
+            android:layout_marginTop="60dp"
+            android:textSize="15sp"
+            android:inputType="textPersonName"
+            android:hint="@string/text_generate"/>
+
+        <TextView
+            android:id="@+id/tvWalletBit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAddress"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="12dp"
+            android:layout_toStartOf="@+id/btnSaveAddress"
+            android:text="Balance                            0.0000"
+            android:background="@color/green"
+            android:drawableLeft="@drawable/ic_baseline_currency_bitcoin_24"
+           android:drawableTint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/tvWalletBitBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvWalletBit"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:layout_toStartOf="@+id/btnSaveAddress"
+            android:text="Final Balance                   0.0000"
+            android:background="@color/green"
+            android:drawableLeft="@drawable/ic_baseline_currency_bitcoin_24"
+            android:drawableTint="@color/black"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/tvWalletBitUnconfirmed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvWalletBitBalance"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:layout_toStartOf="@+id/btnSaveAddress"
+            android:text="Unconfirmed Balance     0.0000"
+            android:background="@color/green"
+            android:drawableLeft="@drawable/ic_baseline_currency_bitcoin_24"
+            android:drawableTint="@color/design_default_color_error"
+            android:textColor="@color/design_default_color_error"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="200dp"
+            android:background="@android:color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_below="@+id/view">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ivQRCode"/>
+        </LinearLayout>
+
+    </RelativeLayout>
 </FrameLayout>

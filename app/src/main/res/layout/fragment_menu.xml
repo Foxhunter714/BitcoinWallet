@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="15dp"
-                app:cardElevation="8dp"
+                app:cardElevation="0dp"
                 android:layout_margin="5dp">
                 <LinearLayout
                     android:id="@+id/llWalletIcon"
@@ -74,7 +74,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="15dp"
-                    app:cardElevation="8dp"
+                    app:cardElevation="0dp"
+                    android:background="@drawable/borde_curvo_color_dark_purple__gradient"
                     android:layout_margin="5dp">
                     <LinearLayout
                         android:id="@+id/llAddressIcon"
@@ -117,7 +118,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     app:cardCornerRadius="15dp"
-                    app:cardElevation="8dp"
+                    app:cardElevation="0dp"
                     android:layout_margin="5dp">
                     <LinearLayout
                         android:id="@+id/llHistorialIcon"
