@@ -15,7 +15,7 @@ class WalletViewModel: ViewModel() {
 
     fun getWallet(): LiveData<Wallet> = repository.wallet
 
-    fun getWalletDetail(): LiveData<WalletDetail> = repository.walletDetail
+    fun getWalletDetail(): MutableLiveData<WalletDetail> = repository.walletDetail
 
     init {
         viewModelScope.launch {

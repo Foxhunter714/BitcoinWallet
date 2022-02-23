@@ -30,6 +30,7 @@ open class AddressGeneratorFragment : Fragment() {
     private lateinit var progressBar: ProgressBar
     private lateinit var txtView: TextView
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -70,7 +71,7 @@ open class AddressGeneratorFragment : Fragment() {
             tvAddress.text = str
 
             val bundle = Bundle()
-            bundle.putString("data", str)
+            bundle.putString("dataWallet", str)
 
             val data = tvAddress.text.toString().trim()
             if (data.isEmpty()){

@@ -14,6 +14,7 @@ import cl.example.bitcoinwallet.databinding.FragmentHistorialTransactionBinding
 class HistorialTransactionFragment : Fragment() {
     private lateinit var binding: FragmentHistorialTransactionBinding
     private val viewModel: WalletViewModel by activityViewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

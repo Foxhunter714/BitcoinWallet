@@ -5,6 +5,9 @@
     <string name="wallet">Wallet</string>
     <string name="historial">History</string>
     <string name="address">Address</string>
+    <string name="addressTitle">Address:</string>
+    <string name="balance">Balance (Satoshis):</string>
+    <string name="date">Date:</string>
     <string name="text_generate">Address generated</string>
     <string name="generate">New Address</string>
     <string name="saveAddres">Save Address</string>
