@@ -38,9 +38,6 @@ class WalletStateFragment : Fragment() {
         tvTitle = binding.tvTitle
         tvAddress = binding.tvAddress
 
-
-
-
         val myRandomAddress = mutableListOf("tb1qp824t5qzmrq5tp9lzr87pk580apqdk6lvat333",
             "miBoHmZJYrDsZohsd5Kp2bjh68TParsyME", "2N3gQFsqqsJscuB1C7XTq6puJ1rU5QEakfP","mneiR8AnWiYjHSNiB1f91JojwryhwEq1oT",
             "n4MtG4d8JVV5SyQvbnkf8YjeLK4L4A9HWY", "tb1qxl6vckqsjzzx89p7nm73ya8dt588g4uma0ycrl")
@@ -48,12 +45,12 @@ class WalletStateFragment : Fragment() {
 
 
         //val args = arguments
-        //var inputData = args?.get("data")
+        //val inputData = args?.get("dataWallet")
         //tvAddress.text = inputData.toString()
-        //tvAddress.text = str
+        tvAddress.text = str
 
-        displayMessage = arguments?.getString("dataWallet")
-        tvAddress.text = displayMessage
+        //displayMessage = arguments?.getString("dataWallet")
+        //tvAddress.text = displayMessage
 
         val data = tvAddress.text.toString().trim()
         if (data.isEmpty()){
