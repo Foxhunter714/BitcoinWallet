@@ -1,7 +1,7 @@
-package cl.example.bitcoinwallet.remote
+package cl.example.bitcoinwallet.model.remote
 
-import cl.example.bitcoinwallet.Wallet
-import cl.example.bitcoinwallet.WalletDetail
+import cl.example.bitcoinwallet.model.pojo.Wallet
+import cl.example.bitcoinwallet.model.pojo.WalletDetail
 import retrofit2.Response
 import retrofit2.http.GET
 

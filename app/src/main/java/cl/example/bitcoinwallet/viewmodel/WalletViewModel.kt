@@ -1,6 +1,9 @@
-package cl.example.bitcoinwallet
+package cl.example.bitcoinwallet.viewmodel
 
 import androidx.lifecycle.*
+import cl.example.bitcoinwallet.model.Repository
+import cl.example.bitcoinwallet.model.pojo.Wallet
+import cl.example.bitcoinwallet.model.pojo.WalletDetail
 import kotlinx.coroutines.launch
 
 class WalletViewModel: ViewModel() {

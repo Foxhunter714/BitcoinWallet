@@ -1,4 +1,4 @@
-package cl.example.bitcoinwallet
+package cl.example.bitcoinwallet.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,10 +9,11 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import cl.example.bitcoinwallet.R
 import cl.example.bitcoinwallet.databinding.FragmentMenuBinding
-import cl.example.bitcoinwallet.ui.AddressGeneratorFragment
-import cl.example.bitcoinwallet.ui.HistorialTransactionFragment
-import cl.example.bitcoinwallet.ui.WalletStateFragment
+import cl.example.bitcoinwallet.view.ui.AddressGeneratorFragment
+import cl.example.bitcoinwallet.view.ui.HistorialTransactionFragment
+import cl.example.bitcoinwallet.view.ui.WalletStateFragment
 
 class MenuFragment : Fragment() {
     private lateinit var binding: FragmentMenuBinding

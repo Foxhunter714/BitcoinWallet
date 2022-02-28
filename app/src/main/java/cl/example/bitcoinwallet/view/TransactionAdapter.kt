@@ -1,4 +1,4 @@
-package cl.example.bitcoinwallet
+package cl.example.bitcoinwallet.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import cl.example.bitcoinwallet.databinding.ItemHistoryTransactionBinding
+import cl.example.bitcoinwallet.model.pojo.Wallet
 import java.text.SimpleDateFormat
 
 class TransactionAdapter: RecyclerView.Adapter<TransactionAdapter.TransactionVH>() {

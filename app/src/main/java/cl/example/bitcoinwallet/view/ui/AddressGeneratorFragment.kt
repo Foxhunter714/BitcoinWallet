@@ -1,19 +1,15 @@
-package cl.example.bitcoinwallet.ui
+package cl.example.bitcoinwallet.view.ui
 
 import android.app.AlertDialog
-import android.app.Dialog
 import android.content.DialogInterface
 import android.graphics.Bitmap
 import android.graphics.Color
-import android.icu.text.CaseMap
 import android.os.Bundle
-import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.fragment.app.setFragmentResultListener
 import cl.example.bitcoinwallet.R
 import cl.example.bitcoinwallet.databinding.FragmentAddressGeneratorBinding
 import com.google.zxing.BarcodeFormat

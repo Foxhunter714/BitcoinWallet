@@ -1,4 +1,4 @@
-package cl.example.bitcoinwallet.ui
+package cl.example.bitcoinwallet.view.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import cl.example.bitcoinwallet.TransactionAdapter
-import cl.example.bitcoinwallet.WalletViewModel
+import cl.example.bitcoinwallet.view.TransactionAdapter
+import cl.example.bitcoinwallet.viewmodel.WalletViewModel
 import cl.example.bitcoinwallet.databinding.FragmentHistorialTransactionBinding
 
 class HistorialTransactionFragment : Fragment() {

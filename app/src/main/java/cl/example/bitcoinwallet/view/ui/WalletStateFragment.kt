@@ -1,4 +1,4 @@
-package cl.example.bitcoinwallet.ui
+package cl.example.bitcoinwallet.view.ui
 
 import android.graphics.Bitmap
 import android.graphics.Color
@@ -11,7 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
-import cl.example.bitcoinwallet.WalletViewModel
+import cl.example.bitcoinwallet.viewmodel.WalletViewModel
 import cl.example.bitcoinwallet.databinding.FragmentWalletStateBinding
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.WriterException

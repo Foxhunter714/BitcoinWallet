@@ -1,7 +1,10 @@
-package cl.example.bitcoinwallet
+package cl.example.bitcoinwallet.model
 
 import androidx.lifecycle.MutableLiveData
-import cl.example.bitcoinwallet.remote.RetrofitClient
+import cl.example.bitcoinwallet.WalletApplication
+import cl.example.bitcoinwallet.model.pojo.Wallet
+import cl.example.bitcoinwallet.model.pojo.WalletDetail
+import cl.example.bitcoinwallet.model.remote.RetrofitClient
 import timber.log.Timber
 
 class Repository {

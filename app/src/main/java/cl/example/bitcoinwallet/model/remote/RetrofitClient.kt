@@ -1,4 +1,4 @@
-package cl.example.bitcoinwallet.remote
+package cl.example.bitcoinwallet.model.remote
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

@@ -1,4 +1,4 @@
-package cl.example.bitcoinwallet
+package cl.example.bitcoinwallet.model.pojo
 
 data class Wallet (
     val address: String?,

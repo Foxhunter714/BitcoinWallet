@@ -1,4 +1,4 @@
-package cl.example.bitcoinwallet
+package cl.example.bitcoinwallet.model.pojo
 
 data class WalletDetail (
         val block_height: Int?,

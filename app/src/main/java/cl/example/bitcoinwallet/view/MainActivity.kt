@@ -1,9 +1,8 @@
-package cl.example.bitcoinwallet
+package cl.example.bitcoinwallet.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import cl.example.bitcoinwallet.ui.AddressGeneratorFragment
+import cl.example.bitcoinwallet.R
 
 /*
 [X] Modelo (data class)
